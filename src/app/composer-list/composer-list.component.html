@@ -1,0 +1,54 @@
+<!--
+; Title: Assignment 4.4 - Async Pipe
+; Author: Professor Krasso
+; Date: 06/17/2023
+; Description: composer-list Component.
+-->
+
+
+<div class="col-8 m-auto">
+
+  <div class="textSearch">
+    <!-- o	Add the FormControl directive to the txtSearch input field and pass-in our txtSearchControl variable  -->
+      <input type="text" id="txtsearch" class="form-control" placeholder="Search by name" [formControl]="txtSearchControl" />
+  </div>
+
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <!-- Add a new column to the table for Composer ID -->
+      <th scope="col">Composer ID</th>
+      <th scope="col">Composer</th>
+      <th scope="col">Genre</th>
+    </tr>
+  </thead>
+
+<!--
+  Using the *ngFor directive, loop over the array of composers and output the
+  results to a Bootstrap table
+
+  Add the async pipe to the tbody *ngFor loop
+-->
+  <tbody *ngFor="let composer of composers | async">
+
+    <tr>
+      <td scope="row">
+<!--
+
+  Update the table definition to include the composerId
+
+  Wrap the composerId table definition with an HTML anchor tag and
+  pass-in the composerId value
+
+-->
+        <a routerLink="/composer-details/{{ composer.composerId }}">
+          {{ composer.composerId }}
+        </a>
+      </td>
+      <td scope="row">{{ composer.fullName }}</td>
+      <td scope="row">{{ composer.genre }}</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>

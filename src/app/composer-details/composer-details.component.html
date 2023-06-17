@@ -1,0 +1,38 @@
+<!--
+    Title: Exercise 3.2 - Passing Data to Routes, Part 1
+    Arthur: Professor Krasso
+    Date: 06/09/2023
+    Description: composer-details.component
+-->
+
+<div class="col-8 m-auto">
+<div class="row">
+
+  <div class="col-sm-12">
+
+<!--
+  Create a Bootstrap list group and output each value of the
+  composer object
+-->
+    <ul class="list-group">
+
+      <li class="list-group-item">Composer ID: {{ composer.composerId }}</li>
+      <li class="list-group-item">Full name: {{ composer.fullName }}</li>
+      <li class="list-group-item">Genre: {{ composer.genre }}</li>
+
+    </ul>
+    <br>
+
+<!--
+  Under the Bootstrap list group add an anchor tag with a routerLink
+  that returns users to the composer-list route.
+
+  Float the anchor tag to the right
+-->
+    <a routerLink="/composer-list" class="float-end">
+      Return to Composers
+    </a>
+
+  </div>
+</div>
+</div>

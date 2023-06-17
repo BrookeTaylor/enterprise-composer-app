@@ -1,0 +1,52 @@
+<!--
+    Title: Assignment 4.4 - Async Pipe
+    Arthur: Professor Krasso
+    Date: 06/17/2023
+    Description: Enterprise Composer App Component
+-->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/composer-list">Composer List</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--
+  Create a new bootstrap layout with a top navigation and a main body container
+-->
+<div role="main" class="container-fluid">
+
+<h1 class="m-5">{{ assignment }}</h1>
+
+
+
+<!--
+  Remove the boilerplate code from the app.component.html file and add
+  the <router-outlet> directive
+-->
+<router-outlet></router-outlet>
+
+
+
+</div><!-- /main .container-fluid -->
