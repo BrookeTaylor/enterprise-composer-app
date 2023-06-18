@@ -124,7 +124,11 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/enterprise-composer-app",
+            "outputPath": "dist/enterprise-composer-app"
+          }
         }
       }
     }},
