@@ -24,6 +24,7 @@ import { RouterModule } from '@angular/router';
 
 // Add an import statement for Angular’s built-in FormsModule and ReactiveFormsModule
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     ContactUsComponent,
     ComposerDetailsComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

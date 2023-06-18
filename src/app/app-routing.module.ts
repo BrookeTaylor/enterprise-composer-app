@@ -17,15 +17,19 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ComposerDetailsComponent } from './composer-details/composer-details.component';
 // import { Composer } from './composer.class';
 
+// Wild card
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 const routes: Routes = [
 
-  { path: '', component: ComposerListComponent },
+  { path: '', redirectTo: '/composer-list', pathMatch: 'full' },
   { path: 'composer-list', component: ComposerListComponent },
   // Add a new entry for the composer details page with an id
   // parameter called composerId
   { path: 'composer-details/:composerId', component: ComposerDetailsComponent},
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactUsComponent }
+  { path: 'contact', component: ContactUsComponent },
+  { path: '**', component: PageNotFoundComponent }
 
 ];
 
