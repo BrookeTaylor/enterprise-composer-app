@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "enterprise-composer-app:build"
+            "buildTarget": "enterprise-composer-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "enterprise-composer-app:build:production"
+              "buildTarget": "enterprise-composer-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "enterprise-composer-app:build"
+            "buildTarget": "enterprise-composer-app:build"
           }
         },
         "test": {
