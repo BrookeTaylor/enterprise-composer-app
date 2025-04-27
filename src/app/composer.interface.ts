@@ -1,12 +1,11 @@
-/*
-============================================
-; Title: Exercise 3.2 - Passing Data to Routes, Part 1
-; Author: Professor Krasso
-; Date: 06/08/2023
-; Modified By: Brooks
-; Description: composer.interface.ts
-============================================
-*/
+/**
+ * Title: Exercise 3.2 - Passing Data to Routes, Part 1
+ * Instructor: Professor Krasso
+ * Author: Brooke Taylor
+ * Date: 6/8/23
+ * Revision: 4/25/25
+ * Description: Composer Interface
+ */
 
 // Rename the interface to IComposer, export interface IComposer
 export interface IComposer {

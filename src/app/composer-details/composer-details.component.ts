@@ -21,9 +21,10 @@ import { ActivatedRoute } from '@angular/router';
 import { ComposerService } from '../composer.service';
 
 @Component({
-  selector: 'app-composer-details',
-  templateUrl: './composer-details.component.html',
-  styleUrls: ['./composer-details.component.css']
+    selector: 'app-composer-details',
+    templateUrl: './composer-details.component.html',
+    styleUrls: ['./composer-details.component.css'],
+    standalone: false
 })
 export class ComposerDetailsComponent implements OnInit {
 

@@ -1,6 +1,36 @@
+/**
+    Title: Exercise 3.2 - Passing Data to Routes, Part 1
+    Instructor: Professor Krasso
+    Author: Brooke Taylor
+    Date: 6/17/2023
+    Revision: 4/25/25
+
+    Description: import bootstrap icons.
+*/
 
 .textSearch {
-  width: 30%;
-  float: right;
-  margin-bottom: 5px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.sortFilter {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-bottom: 2.5%;
+
+}
+
+.sortFilter > button {
+  background-color: lightgray;
+  width: 50%;
+  margin: .5em;
+}
+
+
+.table {
+  margin-right:5%;
+  margin-left: 5%;
 }

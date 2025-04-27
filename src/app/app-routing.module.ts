@@ -1,12 +1,12 @@
-/*
-============================================
-; Title: Exercise 4.2 – Inversion of Control and Dependency Injection
-; Author: Professor Krasso
-; Date: 06/12/2023
-; Modified By: Brooks
-; Description: app-routing.module
-============================================
-*/
+/**
+ * Title: Exercise 4.2 – Inversion of Control and Dependency Injection
+ * Instructor: Professor Krasso
+ * Author: Brooke Taylor
+ * Date: 6/12/23
+ * Revision: 4/25/25
+ *
+ * Description: App Routing Module
+ */
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';

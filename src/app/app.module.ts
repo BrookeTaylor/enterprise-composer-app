@@ -1,12 +1,11 @@
-/*
-============================================
-; Title: Exercise 4.3 – Handling Form Events with Observables
-; Author: Professor Krasso
-; Date: 06/12/2023
-; Modified By: Brooks
-; Description: app.module
-============================================
-*/
+/**
+ * Title: Exercise 4.3 – Handling Form Events with Observables
+ * Instructor: Professor Krasso
+ * Author: Brooke Taylor
+ * Date: 6/12/23
+ * Revision: 4/25/25
+ * Description: App Module
+ */
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,12 +18,14 @@ import { ComposerListComponent } from './composer-list/composer-list.component';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ComposerDetailsComponent } from './composer-details/composer-details.component';
+import { SortPanelComponent } from './sort-panel/sort-panel.component';
 
 import { RouterModule } from '@angular/router';
 
 // Add an import statement for Angular’s built-in FormsModule and ReactiveFormsModule
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FilterPanelComponent } from './filter-panel/filter-panel.component';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AboutComponent,
     ContactUsComponent,
     ComposerDetailsComponent,
-    PageNotFoundComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +43,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     RouterModule,
 // Add the FormsModule and ReactiveFormsModule to the imports array
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SortPanelComponent,
+    FilterPanelComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

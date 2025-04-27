@@ -1,15 +1,14 @@
-/*
-============================================
-; Title: Assignment 4.4 - Async Pipe
-; Author: Professor Krasso
-; Date: 06/17/2023
-; Modified By: Brooks
-; Description: composer-list Component
-============================================
-*/
+/**
+ * Title: Assignment 4.4 - Async Pipe
+ * Instructor: Professor Krasso
+ * Author: Brooke Taylor
+ * Date: 6/17/23
+ * Revision: 4/25/25
+ * Description: Composer List Component
+ */
 
 import { Component, OnInit } from '@angular/core';
-import { IComposer } from '../composer.interface';
+
 import { ComposerService } from '../composer.service';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
@@ -17,33 +16,50 @@ import { debounceTime } from 'rxjs/operators';
 // Add an import statement for Observable
 import { Observable } from 'rxjs';
 
+import { of } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+
+import { Router } from '@angular/router';
+
 @Component({
-  selector: 'app-composer-list',
-  templateUrl: './composer-list.component.html',
-  styleUrls: ['./composer-list.component.css']
+    selector: 'app-composer-list',
+    templateUrl: './composer-list.component.html',
+    styleUrls: ['./composer-list.component.css'],
+    standalone: false
 })
+
+
 export class ComposerListComponent implements OnInit {
 
-  // Update the composers variable to type Observable<IComposer[]>
-  composers: Observable<IComposer[]>;
+  composers: Observable<any[]> = of([]);
+  allComposers: any[] = [];
+  searchTerm: string = '';
+  selectedGenres: string[] = [];
+  sortOption: 'alphabetical' | 'chronological' | '' = '';
 
-// Add a variable named txtSearchControl and assign it a new instance
-// of the FormControl object
   txtSearchControl = new FormControl('');
 
+
 // Add the ComposerService to the components constructor
-  constructor(private composerService: ComposerService) {
+  constructor(private composerService: ComposerService, private router: Router) {
 
-// In the body of the components constructor, replace the getComposers() call
-// from the Composer class with the composerService.getComposers() function
-    this.composers = this.composerService.getComposers();
+ this.composerService.getComposers().subscribe(data => {
+  this.allComposers = data;
 
+  this.selectedGenres = Array.from(new Set(data.map(c => c.genre)));
 
-// In the components constructor and underneath the getComposers() call
-// add a subscribe() method that listens for valueChanges and calls
-// the filterComposers() function.  Also, make sure you add a
-// debounceTime of 500.
-    this.txtSearchControl.valueChanges.pipe(debounceTime(500)).subscribe(val => this.filterComposers(val));
+  this.updateList();
+//  this.composers = of(this.allComposers);
+});
+
+this.txtSearchControl.valueChanges
+.pipe(debounceTime(500))
+.subscribe(val => {
+  this.searchTerm = val;
+  this.updateList();
+});
+
 
 
   }
@@ -62,5 +78,62 @@ export class ComposerListComponent implements OnInit {
     this.composers = this.composerService.filterComposers(name);
 
   }
+
+  goToDetails(composerId: number): void {
+    this.router.navigate(['/composer-details', composerId]);
+  }
+
+
+
+
+
+
+  showSortPanel: boolean = false;
+  showFilterPanel: boolean = false;
+
+
+toggleSortPanel(): void {
+  this.showSortPanel = !this.showSortPanel;
+  this.showFilterPanel = false;
+  console.log('Toggled sort panel:', this.showSortPanel);
+}
+
+toggleFilterPanel(): void {
+  this.showFilterPanel = !this.showFilterPanel;
+  this.showSortPanel = false;
+  console.log('Toggled filter panel:', this.showFilterPanel);
+}
+
+
+onSortChanged(option: 'alphabetical' | 'chronological'): void {
+  this.sortOption = option;
+  this.updateList();
+}
+
+
+
+onFilterChanged(selectedGenres: string[]): void {
+  this.selectedGenres = selectedGenres;
+  this.updateList();
+}
+
+private updateList(): void {
+
+  let result = this.allComposers.filter(c => {
+    const matchesSearch =
+      !this.searchTerm ||
+      c.fullName.toLowerCase().includes(this.searchTerm.toLowerCase());
+    const matchesGenre = this.selectedGenres.includes(c.genre);
+    return matchesSearch && matchesGenre;
+  });
+
+  if (this.sortOption === 'alphabetical') {
+    result = result.sort((a, b) => a.fullName.localeCompare(b.fullName));
+  } else if (this.sortOption === 'chronological') {
+    result = result.sort((a, b) => a.composerId - b.composerId);
+  }
+
+  this.composers = of(result);
+}
 
 }

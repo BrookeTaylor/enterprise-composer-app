@@ -1,8 +1,8 @@
-# WEB425 - Angular with TypeScript
+Title: WEB425 - Angular with TypeScript  
+Instructor: Professor Krasso  
+Author: Brooke Taylor  
+Date: 6/17/23  
+Revision: 4/25/25  
 
-## enterprise-composer-app
+Description: Enhanced Composer App  
 
-### Contributors
-
-* Professor Krasso
-* Brooke Taylor

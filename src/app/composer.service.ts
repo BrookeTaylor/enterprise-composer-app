@@ -1,12 +1,11 @@
-/*
-============================================
-; Title: Assignment 4.4 - Async Pipe
-; Author: Professor Krasso
-; Date: 06/17/2023
-; Modified By: Brooks
-; Description: composer.service
-============================================
-*/
+/**
+ * Title: Assignment 4.4 - Async Pipe
+ * Instructor: Professor Krasso
+ * Author: Brooke Taylor
+ * Date: 6/17/23
+ * Revision: 4/25/25
+ * Description: Composer Service
+ */
 
 import { Injectable } from '@angular/core';
 
@@ -40,20 +39,47 @@ export class ComposerService {
      this.composers = [
 
        {
-         composerId: 100, fullName: 'Ludwig Beethoven', genre: 'Classical'
+         composerId: 100, fullName: 'Antonio Vivaldi', genre: 'Baroque'
        },
        {
-         composerId: 101, fullName: 'Wolfgang Mozart', genre: 'Classical'
+         composerId: 101, fullName: 'Johann Sebastian Bach', genre: 'Baroque'
        },
        {
-         composerId: 102, fullName: 'Johannes Brahms', genre: 'Classical'
+         composerId: 102, fullName: 'Wolfgang Amadeus Mozart', genre: 'Classical'
        },
        {
-         composerId: 103, fullName: 'Richard Wagner', genre: 'Classical'
+         composerId: 103, fullName: 'Ludwig van Beethoven', genre: 'Classical'
        },
        {
-         composerId: 104, fullName: 'Peter Tchaikovsky', genre: 'Classical'
-       }
+         composerId: 104, fullName: 'Frederic Chopin', genre: 'Romantic'
+       },
+       {
+        composerId: 105, fullName: 'Pyotr Ilyich Tchaikovsky', genre: 'Romantic'
+      },
+      {
+        composerId: 106, fullName: 'Claude Debussy', genre: 'Impressionist'
+      },
+      {
+        composerId: 107, fullName: 'Erik Satie', genre: 'Impressionist'
+      },
+      {
+        composerId: 108, fullName: 'Igor Stravinsky', genre: '20th Century'
+      },
+      {
+        composerId: 109, fullName: 'Phillip Glass', genre: '20th Century'
+      },
+      {
+        composerId: 110, fullName: 'John Williams', genre: 'Film'
+      },
+      {
+        composerId: 111, fullName: 'Joe Hisaishi', genre: 'Film'
+      },
+      {
+        composerId: 112, fullName: 'Koji Kondo', genre: 'Games'
+      },
+      {
+        composerId: 113, fullName: 'Nobuo Uematsu', genre: 'Games'
+      }
 
      ];
 
@@ -104,5 +130,14 @@ export class ComposerService {
 
      }
 
+
+     getComposersSortedAlphabetically(): Observable<IComposer[]> {
+      const sorted = [...this.composers].sort((a, b) => a.fullName.localeCompare(b.fullName));
+      return of(sorted);
+    }
+
+
 }
+
+
 
