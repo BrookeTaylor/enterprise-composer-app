@@ -3,7 +3,7 @@
  * Instructor: Professor Krasso
  * Author: Brooke Taylor
  * Date: 6/8/23
- * Revision: 4/25/25
+ * Revision: 4/27/25
  * Description: Composer Interface
  */
 
@@ -13,5 +13,9 @@ export interface IComposer {
   composerId: number;
   fullName: string;
   genre: string;
-
+  img: string;
+  source: string;
+  worksOne: string;
+  worksTwo: string;
+  bio: string;
 }

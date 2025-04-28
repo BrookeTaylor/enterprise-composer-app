@@ -1,0 +1,86 @@
+/**
+    Title: Contact Us
+    Instructor: Professor Krasso
+    Author: Brooke Taylor
+    Revision: 4/27/25
+
+    Description: Contact Us Component
+*/
+
+
+
+/* ***** RESPONSIVE MAPS ***** */
+.map-small,
+.map-medium {
+  display: none;
+}
+
+@media (max-width: 430px) {
+  .map-small {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+  }
+}
+
+@media (min-width: 431px) {
+  .map-medium {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+  }
+}
+/* ***** RESPONSIVE MAPS ***** */
+
+
+
+
+/* ***** FLEX CONTAINER ***** */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 931px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+/* ***** FLEX CONTAINER ***** */
+
+
+
+
+
+.flex-item-right, .flex-item-left {
+  padding: 2.5%;
+}
+
+
+.flex-item-right {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@media (max-width: 932px) {
+  .flex-item-right {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+@media (min-width: 660px) {
+  .flex-item-left {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+ul {
+  margin: 1em;
+  list-style-type: none;
+}

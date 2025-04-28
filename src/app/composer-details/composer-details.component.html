@@ -1,38 +1,43 @@
 <!--
     Title: Exercise 3.2 - Passing Data to Routes, Part 1
-    Arthur: Professor Krasso
-    Date: 06/09/2023
-    Description: composer-details.component
+    Instructor: Professor Krasso
+    Author: Brooke Taylor
+    Date: 6/9/23
+    Revision: 4/27/25
+
+    Description: Composer Details Component
 -->
 
-<div class="col-8 m-auto">
-<div class="row">
+<a routerLink="/composer-list" class="float-end">
+  Return to Composers
+</a>
 
-  <div class="col-sm-12">
+<h3 class="text-center">{{ composer.fullName }}</h3>
 
-<!--
-  Create a Bootstrap list group and output each value of the
-  composer object
--->
-    <ul class="list-group">
+<div class="flex-container">
 
-      <li class="list-group-item">Composer ID: {{ composer.composerId }}</li>
-      <li class="list-group-item">Full name: {{ composer.fullName }}</li>
-      <li class="list-group-item">Genre: {{ composer.genre }}</li>
+  <div class="flex-item-left">
+      <figure>
 
-    </ul>
-    <br>
+      <img *ngIf="composer" [src]="composer.img" class="img-fluid"
+      alt="Picture of {{ composer.fullName }}" />
 
-<!--
-  Under the Bootstrap list group add an anchor tag with a routerLink
-  that returns users to the composer-list route.
+      <figcaption>(Image Source: <a href="{{ composer.source }}">{{ composer.source }}</a>)</figcaption>
 
-  Float the anchor tag to the right
--->
-    <a routerLink="/composer-list" class="float-end">
-      Return to Composers
-    </a>
+      </figure>
 
   </div>
-</div>
+  <div class="flex-item-right">
+
+      Famous Works:
+      <ul>
+          <li>{{ composer.worksOne }}</li>
+          <li>{{ composer.worksTwo }}</li>
+      </ul>
+
+      <p>
+          {{ composer.bio }}
+      </p>
+
+  </div>
 </div>

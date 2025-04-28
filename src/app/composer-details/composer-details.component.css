@@ -1,0 +1,28 @@
+/**
+    Title: Composer Details
+    Instructor: Professor Krasso
+    Author: Brooke Taylor
+    Revision: 4/27/25
+
+    Description: Composer Details Styles
+*/
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-item-left, .flex-item-right {
+  flex: 50%;
+  padding: 2.5%
+}
+
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+
+  }
+}
+

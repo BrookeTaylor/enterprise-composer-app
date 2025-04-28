@@ -51,6 +51,9 @@ export class ComposerDetailsComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('composerId'));
+
+      this.composer = this.composerService.getComposer(id);
   }
 
 }

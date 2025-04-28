@@ -39,46 +39,46 @@ export class ComposerService {
      this.composers = [
 
        {
-         composerId: 100, fullName: 'Antonio Vivaldi', genre: 'Baroque'
+         composerId: 100, fullName: 'Antonio Vivaldi', genre: 'Baroque', img: 'assets/composers/vivaldi.jpg', source: 'https://en.wikipedia.org/wiki/Antonio_Vivaldi', worksOne: 'The 4 Seasons', worksTwo: 'L\'Olimpiade', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
        },
        {
-         composerId: 101, fullName: 'Johann Sebastian Bach', genre: 'Baroque'
+         composerId: 101, fullName: 'Johann Sebastian Bach', genre: 'Baroque', img: 'assets/composers/bach.jpg', source: 'https://en.wikipedia.org/wiki/Johann_Sebastian_Bach', worksOne: 'Orchestral Suite No.3', worksTwo: 'Cello Suite #1 in G, Prelude', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
        },
        {
-         composerId: 102, fullName: 'Wolfgang Amadeus Mozart', genre: 'Classical'
+         composerId: 102, fullName: 'Wolfgang Amadeus Mozart', genre: 'Classical', img: 'assets/composers/mozart.jpg', source: 'https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart?variant=zh-cn', worksOne: 'Rondo alla turca', worksTwo: 'Requiem, K. 615: Illf. Lacrimosa', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
        },
        {
-         composerId: 103, fullName: 'Ludwig van Beethoven', genre: 'Classical'
+         composerId: 103, fullName: 'Ludwig van Beethoven', genre: 'Classical', img: 'assets/composers/beethoven.jpg', source: 'https://en.wikipedia.org/wiki/Ludwig_van_Beethoven', worksOne: 'Moonlight Sonata', worksTwo: 'Fur Elise', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
        },
        {
-         composerId: 104, fullName: 'Frederic Chopin', genre: 'Romantic'
+         composerId: 104, fullName: 'Frederic Chopin', genre: 'Romantic', img: 'assets/composers/chopin.jpg', source: 'https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin', worksOne: 'Nocturne No.2 in E-Flat Major', worksTwo: '24 Preludes', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
        },
        {
-        composerId: 105, fullName: 'Pyotr Ilyich Tchaikovsky', genre: 'Romantic'
+        composerId: 105, fullName: 'Pyotr Ilyich Tchaikovsky', genre: 'Romantic', img: 'assets/composers/tchaikovsky.jpg', source: 'https://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky?variant=zh-tw', worksOne: 'Waltz of the Flowers', worksTwo: 'Dance of the Sugar Plum Fairy', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
       },
       {
-        composerId: 106, fullName: 'Claude Debussy', genre: 'Impressionist'
+        composerId: 106, fullName: 'Claude Debussy', genre: 'Impressionist', img: 'assets/composers/debussy.jpg', source: 'https://en.wikipedia.org/wiki/Claude_Debussy', worksOne: 'Clair De Lune', worksTwo: 'Arabesque', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
       },
       {
-        composerId: 107, fullName: 'Erik Satie', genre: 'Impressionist'
+        composerId: 107, fullName: 'Erik Satie', genre: 'Impressionist', img: 'assets/composers/satie.jpg', source: 'https://en.wikipedia.org/wiki/Erik_Satie', worksOne: 'Gymnopedie', worksTwo: 'Je te veux', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
       },
       {
-        composerId: 108, fullName: 'Igor Stravinsky', genre: '20th Century'
+        composerId: 108, fullName: 'Igor Stravinsky', genre: '20th Century', img: 'assets/composers/stravinsky.jpg', source: 'https://en.wikipedia.org/wiki/Igor_Stravinsky', worksOne: 'The Rite of Spring', worksTwo: 'The Firebird', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
       },
       {
-        composerId: 109, fullName: 'Phillip Glass', genre: '20th Century'
+        composerId: 109, fullName: 'Phillip Glass', genre: '20th Century', img: 'assets/composers/glass.jpg', source: 'https://en.wikipedia.org/wiki/Philip_Glass', worksOne: 'Pruit', worksTwo: 'Igoe', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
       },
       {
-        composerId: 110, fullName: 'John Williams', genre: 'Film'
+        composerId: 110, fullName: 'John Williams', genre: 'Film', img: 'assets/composers/williams.jpg', source: 'https://en.wikipedia.org/wiki/John_Williams', worksOne: 'The Imperial March', worksTwo: 'O Holy Night', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
       },
       {
-        composerId: 111, fullName: 'Joe Hisaishi', genre: 'Film'
+        composerId: 111, fullName: 'Joe Hisaishi', genre: 'Film', img: 'assets/composers/hisaishi.jpg', source: 'https://en.wikipedia.org/wiki/Joe_Hisaishi', worksOne: 'Merry-Go-Round of Life', worksTwo: 'One Summer\'s Day', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
       },
       {
-        composerId: 112, fullName: 'Koji Kondo', genre: 'Games'
+        composerId: 112, fullName: 'Koji Kondo', genre: 'Games', img: 'assets/composers/kondo.jpg', source: 'https://en.wikipedia.org/wiki/Koji_Kondo', worksOne: 'Main Theme to The Legend of Zelda', worksTwo: 'Super Mario - Castle Theme', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
       },
       {
-        composerId: 113, fullName: 'Nobuo Uematsu', genre: 'Games'
+        composerId: 113, fullName: 'Nobuo Uematsu', genre: 'Games', img: 'assets/composers/uematsu.jpg', source: 'https://en.wikipedia.org/wiki/Nobuo_Uematsu', worksOne: 'One-Winged Angel', worksTwo: 'A Place to Call Home', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus  nisl sit amet gravida maximus. Nunc est nunc, aliquet vulputate nisi a,  sagittis finibus dolor. Fusce scelerisque mauris in mi luctus, fringilla facilisis neque feugiat. Curabitur et porta mauris. Suspendisse  consectetur imperdiet dolor, vitae ultricies nisl gravida vitae.'
       }
 
      ];

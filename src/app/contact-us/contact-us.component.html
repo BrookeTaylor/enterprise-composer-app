@@ -1,51 +1,42 @@
 <!--
-    Title: Composer-App Contact Component
-    Arthur: Professor Krasso
-    Date: 06/09/2023
-    Description: Contact Component.
+    Title: Contact Us
+    Instructor: Professor Krasso
+    Author: Brooke Taylor
+    Date: 6/9/23
+    Revision: 4/27/25
+
+    Description: Contact Us Component.
 -->
 
-<!--
+<div class="flex-container">
 
-  Update the HTML in the contact.component.html to tell users how they may
-  contact the selected composer
+  <div class="flex-item-left">
+      <div class="map-small">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6204.8585762193625!2d-94.49238509999999!3d38.959864599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e6c666f7e329%3A0xbf33d2be418549f!2s9001%20James%20A%20Reed%20Rd%2C%20Kansas%20City%2C%20MO%2064138!5e0!3m2!1sen!2sus!4v1745780127733!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
-  At minimum there should be two side-by-side divs. The left <div> should
-  contain a header and a street address.  The right <div> should contain a
-  header and a phone number.  For the headers, use Bootstrap icons that best
-  represent each section
-
--->
-
-
-<div class="col-8 m-auto">
-<h2 class="text-center">Contact Us</h2>
-
-<div class="d-flex justify-content-around">
-
-  <div>
-
-    <i class="bi bi-geo-alt fs-1 text"></i>
-
-    <h3>Location</h3>
-
-    <address>
-      1827 Bonn, Cologne<br>
-      Germany
-    </address>
-
+        <div class="map-medium">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6204.8585762193625!2d-94.49238509999999!3d38.959864599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e6c666f7e329%3A0xbf33d2be418549f!2s9001%20James%20A%20Reed%20Rd%2C%20Kansas%20City%2C%20MO%2064138!5e0!3m2!1sen!2sus!4v1745780127733!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
   </div>
 
-  <div>
 
-    <i class="bi bi-telephone fs-1 text"></i>
+  <div class="flex-item-right">
+      <h3>Composer App Studio</h3>
 
-    <h3>Reach us by phone:</h3>
+      <address>
+        9001 James A Reed Rd<br>
+        Kansas City, MO 64138
+      </address>
 
-    <a href="tel:+12171770">12171770</a>
+      <a href="tel:123-456-7890">1(800)COM-POSE</a>
+
+      <ul>
+        <li><a href="https://music.youtube.com/"><img src="assets/icons/YouTubeMusic.png" width="25" height="25" alt="YouTube Music link" />YouTube Music</a></li>
+        <li><a href="https://www.pandora.com/"><img src="assets/icons/pandora.png" width="25" height="25" alt="Pandora Music link" />Pandora Music</a></li>
+        <li><a href="https://open.spotify.com/"><img src="assets/icons/spotify.png" width="25" height="25" alt="Spotify Music link" />Spotify Music</a></li>
+      </ul>
 
   </div>
-
-</div>
 
 </div>
