@@ -10,6 +10,7 @@
 
 .textSearch {
   width: 80%;
+  margin-bottom: 1em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -24,9 +25,9 @@
 }
 
 .sortFilter > button {
-  background-color: lightgray;
   width: 50%;
   margin: .5em;
+  font-size: large;
 }
 
 
