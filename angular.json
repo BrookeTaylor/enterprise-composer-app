@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "dist/enterprise-composer-app"
+              "base": "dist/enterprise-composer-app/browser"
             },
             "index": "src/index.html",
             "polyfills": [
