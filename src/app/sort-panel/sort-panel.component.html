@@ -1,5 +1,40 @@
+<!--
+    Title: Sort Panel
+    Instructor: Professor Krasso
+    Author: Brooke Taylor
+
+    Revision: 4/29/25
+
+    Description: Sort Panel Component
+-->
+
 <div class="sort-panel">
-  <h4>SORT OPTIONS</h4>
-  <button (click)="chooseSort('chronological')">Chronological</button>
-  <button (click)="chooseSort('alphabetical')">Alphabetical</button>
+
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="sortOption"
+      id="sortChronological"
+      [checked]="selectedOption === 'chronological'"
+      (change)="chooseSort('chronological')"
+    />
+    <label class="form-check-label" for="sortChronological">
+      Chronological
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="sortOption"
+      id="sortAlphabetical"
+      [checked]="selectedOption === 'alphabetical'"
+      (change)="chooseSort('alphabetical')"
+    />
+    <label class="form-check-label" for="sortAlphabetical">
+      Alphabetical
+    </label>
+  </div>
 </div>

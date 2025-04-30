@@ -3,7 +3,7 @@
  * Instructor: Professor Krasso
  * Author: Brooke Taylor
  * Date: 6/12/23
- * Revision: 4/25/25
+ * Revision: 4/29/25
  * Description: App Module
  */
 
@@ -27,6 +27,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FilterPanelComponent } from './filter-panel/filter-panel.component';
 
+// popover
+import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +48,8 @@ import { FilterPanelComponent } from './filter-panel/filter-panel.component';
     FormsModule,
     ReactiveFormsModule,
     SortPanelComponent,
-    FilterPanelComponent
+    FilterPanelComponent,
+    NgbPopoverModule
   ],
   providers: [],
   bootstrap: [AppComponent]

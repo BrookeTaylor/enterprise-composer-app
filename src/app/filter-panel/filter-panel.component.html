@@ -2,7 +2,7 @@
     Title: Filter Panel
     Instructor: Professor Krasso
     Author: Brooke Taylor
-    Revision: 4/28/25
+    Revision: 4/29/25
 
     Description: Filter Panel Component
 -->
@@ -13,8 +13,6 @@
     <button type="button" class="btn btn-sm btn-outline-primary" (click)="selectAll()">Select All</button>
     <button type="button" class="btn btn-sm btn-outline-danger"  (click)="deselectAll()">Deselect All</button>
   </div>
-
-  <h4>Filter by Genre</h4>
 
   <div class="row">
     <div *ngFor="let genre of genres" class="col-6">

@@ -1,3 +1,12 @@
+/**
+ * Title: Sort Panel
+ * Instructor: Professor Krasso
+ * Author: Brooke Taylor
+
+ * Revision: 4/29/25
+ * Description: Sort Panel Component
+ */
+
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -6,9 +15,12 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./sort-panel.component.css']
 })
 export class SortPanelComponent {
-  @Output() sortChanged = new EventEmitter<string>();
+  @Output() sortChanged = new EventEmitter<'chronological' | 'alphabetical'>();
 
-  chooseSort(option: string) {
+  selectedOption: 'chronological' | 'alphabetical' | '' = '';
+
+  chooseSort(option: 'chronological' | 'alphabetical') {
+    this.selectedOption = option;
     this.sortChanged.emit(option);
   }
 }

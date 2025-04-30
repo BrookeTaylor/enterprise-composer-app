@@ -3,7 +3,7 @@
     Instructor: Professor Krasso
     Author: Brooke Taylor
     Date: 6/17/23
-    Revision: 4/25/25
+    Revision: 4/29/25
 
     Description: Composer List Component
 -->
@@ -11,25 +11,7 @@
 <div class="col-8 m-auto">
 
 
-  <app-sort-panel *ngIf="showSortPanel" (sortChanged)="onSortChanged($event)"></app-sort-panel>
 
-  <app-filter-panel *ngIf="showFilterPanel" (filterChanged)="onFilterChanged($event)"></app-filter-panel>
-
-  <div class="sortFilter">
-    <button (click)="toggleSortPanel()" class="btn">
-      Sort
-      <img src="assets/icons/sort.png" alt="Sort" />
-
-    </button>
-
-
-
-    <button  (click)="toggleFilterPanel()" class="btn">
-      Filter
-      <img src="assets/icons/filter.png" alt="Filter" />
-
-    </button>
-  </div>
 
 
   <div class="textSearch">
@@ -38,8 +20,62 @@
   </div>
 
 
+  <div class="sortFilter">
 
 
+    <button
+    #sortPop="ngbPopover"
+    type="button"
+    class="btn btn-sm"
+    [ngbPopover]="sortTpl"
+    popoverTitle="Sort Options"
+    popoverClass="sort-popover"
+    triggers="manual"
+    [autoClose]="'outside'"
+    container="body"
+    (click)="sortPop.toggle()"
+  >
+    Sort
+    <img src="assets/icons/sort.png" alt="Sort" />
+  </button>
+
+    <button
+    #p="ngbPopover"
+    type="button"
+    class="btn btn-sm"
+    [ngbPopover]="filterTpl"
+    popoverTitle="Filter by Genre"
+    popoverClass="filter-popover"
+    triggers="manual"
+    [autoClose]="'outside'"
+    container="body"
+    (click)="p.toggle()"
+  >
+  Filter
+
+  <img src="assets/icons/filter.png" alt="Filter" />
+</button>
+
+
+  </div>
+
+
+
+
+<ng-template #sortTpl>
+  <app-sort-panel
+    [selectedOption]="sortOption"
+    (sortChanged)="onSortChanged($event)"
+  ></app-sort-panel>
+</ng-template>
+
+  <ng-template #filterTpl>
+    <app-filter-panel
+    [genres]="genres"
+    [selectedGenres]="selectedGenres"
+    (filterChanged)="onFilterChanged($event)"
+  ></app-filter-panel>
+  </ng-template>
 
 
   <table class="table">

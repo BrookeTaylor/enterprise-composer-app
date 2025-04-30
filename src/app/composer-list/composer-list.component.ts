@@ -3,7 +3,7 @@
  * Instructor: Professor Krasso
  * Author: Brooke Taylor
  * Date: 6/17/23
- * Revision: 4/25/25
+ * Revision: 4/29/25
  * Description: Composer List Component
  */
 
@@ -88,19 +88,21 @@ this.txtSearchControl.valueChanges
 
 
 
-  showSortPanel: boolean = false;
+//  showSortPanel: boolean = false;
   showFilterPanel: boolean = false;
 
+  /*
 
 toggleSortPanel(): void {
   this.showSortPanel = !this.showSortPanel;
   this.showFilterPanel = false;
   console.log('Toggled sort panel:', this.showSortPanel);
 }
+  */
 
 toggleFilterPanel(): void {
   this.showFilterPanel = !this.showFilterPanel;
-  this.showSortPanel = false;
+//  this.showSortPanel = false;
   console.log('Toggled filter panel:', this.showFilterPanel);
 }
 
