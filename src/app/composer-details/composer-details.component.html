@@ -3,32 +3,35 @@
     Instructor: Professor Krasso
     Author: Brooke Taylor
     Date: 6/9/23
-    Revision: 4/27/25
+    Revision: 4/30/25
 
     Description: Composer Details Component
 -->
 
-<a routerLink="/composer-list" class="float-end">
+<a routerLink="/composer-list" class="float-end goBack">
   Return to Composers
 </a>
 
-<h3 class="text-center">{{ composer.fullName }}</h3>
+<br>
 
-<div class="flex-container">
+<div class="composerDetails">
 
-  <div class="flex-item-left">
+  <h3 class="text-center">{{ composer.fullName }}</h3>
+
+  <div class="flex-container">
+
+    <div class="flex-item-left">
       <figure>
 
-      <img *ngIf="composer" [src]="composer.img" class="img-fluid"
-      alt="Picture of {{ composer.fullName }}" />
+        <img *ngIf="composer" [src]="composer.img" class="img-fluid"
+        alt="Picture of {{ composer.fullName }}" />
 
-      <figcaption>(Image Source: <a href="{{ composer.source }}">{{ composer.source }}</a>)</figcaption>
+        <figcaption>(Image Source: <a href="{{ composer.source }}">{{ composer.source }}</a>)</figcaption>
 
-      </figure>
+        </figure>
+    </div>
 
-  </div>
-  <div class="flex-item-right">
-
+    <div class="flex-item-right">
       Famous Works:
       <ul>
           <li>{{ composer.worksOne }}</li>
@@ -38,6 +41,8 @@
       <p>
           {{ composer.bio }}
       </p>
+    </div>
 
   </div>
+
 </div>

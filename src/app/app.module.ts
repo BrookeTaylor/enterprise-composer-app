@@ -30,6 +30,9 @@ import { FilterPanelComponent } from './filter-panel/filter-panel.component';
 // popover
 import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 
+// angular materials
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +52,8 @@ import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     SortPanelComponent,
     FilterPanelComponent,
-    NgbPopoverModule
+    NgbPopoverModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
