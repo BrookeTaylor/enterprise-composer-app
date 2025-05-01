@@ -36,6 +36,12 @@
     align-items: center;
     gap: 1rem;
   }
+
+  .figure {
+    width: 100%;
+    max-width: 90vw;
+    text-align: center;
+  }
 }
 
 @media (min-width: 872px) {
