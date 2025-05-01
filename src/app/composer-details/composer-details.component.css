@@ -63,10 +63,18 @@
   }
 }
 
+
 img.img-fluid {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.figure {
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  text-align: center;
 }
 
 .composer-image {
