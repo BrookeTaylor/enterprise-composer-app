@@ -2,7 +2,7 @@
     Title: Composer Details
     Instructor: Professor Krasso
     Author: Brooke Taylor
-    Revision: 4/30/25
+    Revision: 5/1/25
 
     Description: Composer Details Styles
 */
@@ -64,7 +64,7 @@
 }
 
 
-figure {
+.figure {
   width: 100%;
   max-width: 300px;
   overflow: hidden;

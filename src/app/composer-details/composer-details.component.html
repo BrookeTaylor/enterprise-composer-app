@@ -3,7 +3,7 @@
     Instructor: Professor Krasso
     Author: Brooke Taylor
     Date: 6/9/23
-    Revision: 4/30/25
+    Revision: 5/1/25
 
     Description: Composer Details Component
 -->
@@ -23,12 +23,13 @@
     <div class="flex-item-left">
       <figure>
 
-        <img *ngIf="composer" [src]="composer.img" class="img-fluid"
-        alt="Picture of {{ composer.fullName }}" />
+        <div class="figure">
+          <img *ngIf="composer" [src]="composer.img" class="img-fluid" alt="Picture of {{ composer.fullName }}" />
+        </div>
 
         <figcaption>(Image Source: <a href="{{ composer.source }}" class="composer-image">{{ composer.source }}</a>)</figcaption>
 
-        </figure>
+      </figure>
     </div>
 
     <div class="flex-item-right">
