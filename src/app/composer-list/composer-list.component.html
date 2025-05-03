@@ -3,80 +3,74 @@
     Instructor: Professor Krasso
     Author: Brooke Taylor
     Date: 6/17/23
-    Revision: 5/2/25
+    Revision: 5/3/25
 
     Description: Composer List Component
 -->
 
-<div class="col-8 m-auto">
-
-
-
-
+<div class="container">
 
   <div class="textSearch">
     <!-- o	Add the FormControl directive to the txtSearch input field and pass-in our txtSearchControl variable  -->
       <input type="text" id="txtsearch" class="form-control" placeholder="Search..." [formControl]="txtSearchControl" />
   </div>
 
-
   <div class="sortFilter">
 
+    <button
+      #sortPop="ngbPopover"
+      type="button"
+      class="btn"
+      [ngbPopover]="sortTpl"
+      popoverTitle="Sort Options"
+      popoverClass="sort-popover"
+      triggers="manual"
+      [autoClose]="'outside'"
+      container="body"
+      (click)="sortPop.toggle()"
+    >
+
+    <span>Sort</span>
+
+    <img src="assets/icons/sort.png" alt="Sort Icon" width="28" height="28" />
+
+    </button>
 
     <button
-    #sortPop="ngbPopover"
-    type="button"
-    class="btn btn-sm"
-    [ngbPopover]="sortTpl"
-    popoverTitle="Sort Options"
-    popoverClass="sort-popover"
-    triggers="manual"
-    [autoClose]="'outside'"
-    container="body"
-    (click)="sortPop.toggle()"
-  >
-    Sort
-    <img src="assets/icons/sort.png" alt="Sort" />
-  </button>
+      #p="ngbPopover"
+      type="button"
+      class="btn"
+      [ngbPopover]="filterTpl"
+      popoverTitle="Filter by Genre"
+      popoverClass="filter-popover"
+      triggers="manual"
+      [autoClose]="'outside'"
+      container="body"
+      (click)="p.toggle()"
+    >
 
-    <button
-    #p="ngbPopover"
-    type="button"
-    class="btn btn-sm"
-    [ngbPopover]="filterTpl"
-    popoverTitle="Filter by Genre"
-    popoverClass="filter-popover"
-    triggers="manual"
-    [autoClose]="'outside'"
-    container="body"
-    (click)="p.toggle()"
-  >
-  Filter
+      <span>Filter</span>
 
-  <img src="assets/icons/filter.png" alt="Filter" />
-</button>
+      <img src="assets/icons/filter.png" alt="Filter Icon" width="28" height="28" />
 
+    </button>
 
   </div>
 
-
-
-
-<ng-template #sortTpl>
-  <app-sort-panel
+  <ng-template #sortTpl>
+    <app-sort-panel
     [selectedOption]="sortOption"
     (sortChanged)="onSortChanged($event)"
-  ></app-sort-panel>
-</ng-template>
+    ></app-sort-panel>
+  </ng-template>
 
   <ng-template #filterTpl>
     <app-filter-panel
     [genres]="genres"
     [selectedGenres]="selectedGenres"
     (filterChanged)="onFilterChanged($event)"
-  ></app-filter-panel>
+    ></app-filter-panel>
   </ng-template>
-
 
   <table class="table">
     <thead class="table-dark">
