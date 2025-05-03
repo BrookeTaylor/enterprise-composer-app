@@ -2,14 +2,16 @@
     Title: Composer Details
     Instructor: Professor Krasso
     Author: Brooke Taylor
-    Revision: 5/1/25
+    Revision: 5/2/25
 
     Description: Composer Details Styles
 */
 
-/* ***** ESCAPE BACK TO COMPOSERS LINK ***** */
+/* back to composer list */
 .goBack {
   color:red;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .composerDetails {
@@ -17,84 +19,35 @@
   padding: 1rem;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 2%;
-}
-
+/* align content */
 .flex-item-left, .flex-item-right {
-  flex: 1;
-  padding: 2%;
-}
-
-@media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .figure {
-    width: 100%;
-    max-width: 90vw;
-    text-align: center;
-  }
-}
-
-@media (min-width: 872px) {
-  .composerDetails{
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .goBack{
-    margin-left: 10%;
-    margin-right: 10%;
-  }
+  display: flex;
+  justify-content: center;
 }
 
 
-@media (min-width: 1010px) {
-  .composerDetails{
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
-  .goBack{
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-}
-
-
-img.img-fluid {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
+/* line up image and figcaption */
 .figure {
-  width: 100%;
-  max-width: 300px;
-  overflow: hidden;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.composer-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
+.flex-item-right {
+  display: flex;
+  flex-direction: column;
 }
 
-figcaption a {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  display: inline-block;
-  max-width: 100%;
+
+@media (min-width: 768px) {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .flex-item-left, .flex-item-right {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
 }

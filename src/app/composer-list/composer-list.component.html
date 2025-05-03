@@ -3,7 +3,7 @@
     Instructor: Professor Krasso
     Author: Brooke Taylor
     Date: 6/17/23
-    Revision: 4/29/25
+    Revision: 5/2/25
 
     Description: Composer List Component
 -->
@@ -88,6 +88,7 @@
 
     <tbody>
       <tr *ngFor="let composer of composers | async"
+      class="table-row"
       (click)="goToDetails(composer.composerId)"
       style="cursor: pointer;">
         <td>{{ composer.fullName }}</td>

@@ -3,7 +3,7 @@
     Instructor: Professor Krasso
     Author: Brooke Taylor
     Date: 6/17/2023
-    Revision: 4/25/25
+    Revision: 5/2/25
 
     Description: import bootstrap icons.
 */
@@ -35,3 +35,37 @@
   margin-right:5%;
   margin-left: 5%;
 }
+
+
+.btn {
+  background-color: #f4f4f4;
+  border: 1px solid #333;
+
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 3px 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+
+.table-row {
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.table-row:hover {
+  background-color: #f4f4f4;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  transform: scale(1.01);
+  transition: background-color 0.2s ease-in-out, transform 0.15s ease;
+}
+

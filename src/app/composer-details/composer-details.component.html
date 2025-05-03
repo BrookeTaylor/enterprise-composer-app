@@ -3,45 +3,46 @@
     Instructor: Professor Krasso
     Author: Brooke Taylor
     Date: 6/9/23
-    Revision: 5/1/25
+    Revision: 5/2/25
 
     Description: Composer Details Component
 -->
 
-<a routerLink="/composer-list" class="float-end goBack">
-  Return to Composers
-</a>
+<div class="container">
 
-<br>
+  <a routerLink="/composer-list" class="goBack">
+    Return to Composers
+  </a>
 
-<div class="composerDetails">
+  <div class="composerDetails">
 
-  <h3 class="text-center">{{ composer.fullName }}</h3>
+    <h3 class="text-center">{{ composer.fullName }}</h3>
 
-  <div class="flex-container">
+    <div class="flex-container">
 
-    <div class="flex-item-left">
-      <figure>
+      <div class="flex-item-left">
+        <figure>
 
-        <div class="figure">
-          <img *ngIf="composer" [src]="composer.img" class="img-fluid" alt="Picture of {{ composer.fullName }}" />
-        </div>
+          <div class="figure">
+            <img *ngIf="composer" [src]="composer.img" class="img-fluid" alt="Picture of {{ composer.fullName }}" />
+          </div>
 
-        <figcaption>(Image Source: <a href="{{ composer.source }}" class="composer-image">{{ composer.source }}</a>)</figcaption>
+          <figcaption>(Image Source: <a href="{{ composer.source }}" class="composer-image">{{ composer.source }}</a>)</figcaption>
+        </figure>
+      </div>
 
-      </figure>
-    </div>
+      <div class="flex-item-right">
+        Famous Works:
+        <ul>
+            <li>{{ composer.worksOne }}</li>
+            <li>{{ composer.worksTwo }}</li>
+        </ul>
 
-    <div class="flex-item-right">
-      Famous Works:
-      <ul>
-          <li>{{ composer.worksOne }}</li>
-          <li>{{ composer.worksTwo }}</li>
-      </ul>
+        <p>
+            {{ composer.bio }}
+        </p>
+      </div>
 
-      <p>
-          {{ composer.bio }}
-      </p>
     </div>
 
   </div>
